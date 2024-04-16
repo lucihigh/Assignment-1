@@ -9,7 +9,7 @@ def calculate_gpa(grades, credits):
             total_grade_points += grade_point * credit_value
             total_credits += credit_value
         except ValueError:
-            print("Invalid input. Please enter numeric values for grades and credits.")
+            print("Invalid input. Please enter numeric values for grades & credits.")
             return None
 
     if total_credits == 0:
@@ -20,7 +20,7 @@ def calculate_gpa(grades, credits):
     return gpa
 
 def main():
-    student_name = input("Enter your name: ")
+    student_name = input("Enter name: ")
     grades = input("Enter your grades separated by spaces: ").split()
     credits = input("Enter the corresponding credits separated by spaces: ").split()
 
