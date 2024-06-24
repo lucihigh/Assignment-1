@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 internal class asm1
@@ -65,11 +65,11 @@ internal class asm1
             return;
         }
 
-        Console.Write("Enter the customer type (household/administrative/production/business): ");
-        string customerType = Console.ReadLine().ToLower();
+        Console.Write("Choose type customer: "+"\n1. Household"+"\n2. Administrative"+"\n3. Production"+"\n4. Business" + "\nEnter the customer type :");
+        string customerType = Console.ReadLine();
 
         int numberPeople = 0;
-        if (customerType == "household")
+        if (customerType == "1")
         {
             Console.Write("Enter the number of people in the household: ");
             numberPeople = int.Parse(Console.ReadLine());
@@ -129,7 +129,7 @@ internal class asm1
         double rate = 0.0;
         switch (customerType)
         {
-            case "household":
+            case "1":
                 double consumptionPerPerson = (double)consumption / (double)numberOfPeople;
                 if (consumptionPerPerson <= 10)
                 {
@@ -149,15 +149,15 @@ internal class asm1
                 }
                 bill = (rate * consumption)*1.1;
                 break;
-            case "administrative":
+            case "2":
                 rate = 9955.0;
                 bill = (rate * (double)consumption) * 1.1;
                 break;
-            case "production":
+            case "3":
                 rate = 11615.0;
                 bill = (rate * (double)consumption) * 1.1;
                 break;
-            case "business":
+            case "4":
                 rate = 22068.0;
                 bill = (rate * (double)consumption) * 1.1;
                 break;
